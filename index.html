@@ -50,64 +50,15 @@ dur=dur2=dur3=0;anime({targets:'#themeToggle',color:'#000000',easing:'linear',du
 function switchToDark(){changeBootstrapClass('dark');anime({targets:'#themeToggle',color:'#ffd600',easing:'linear',duration:150,});anime({targets:'#innerCircle',r:9,cx:12,cy:4,easing:'linear',duration:150});anime({targets:'#actualCircle',r:9,easing:'linear',fill:'#ffd600',duration:150});anime({targets:'#sunDashes > line',opacity:0,duration:150,easing:'linear'});anime({targets:'svg',rotate:40,duration:150,easing:'linear'});}
 function changeBootstrapClass(theme){var $navbar=$("nav");if(theme==='light'){if($navbar.hasClass("navbar-dark")){$("nav").removeClass("navbar-dark");$("nav").addClass("navbar-light");}}else{if($navbar.hasClass("navbar-light")){$("nav").removeClass("navbar-light");$("nav").addClass("navbar-dark");}}}
 </script>
-      <!-- MENU Y NAVBAR -->
-  <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v14.0" nonce="zDe9jI0I"></script>
-<header class="navHeader">
-<nav class="navbar navbar-expand-lg navbar-light justify-content-between nvcustom">
-<a class="navbar-brand" href="file:///C:/Users/armed/Desktop/PAGINA%20WEB/index.html">
-<img id="logo" alt="José-camp" align="left" src="https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/7/6/b/2/76b2e045ffa8f0eef438d2a27422be74.jpg" />
-  
-<p class="brandTitle">José José-Camp</p>
-<p class="brandDescription">Sitio dedicado al principe de la canción</p>
-</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="main-navbar">
-<ul class="nav navbar-nav ml-auto"><li class="nav-item active">
 
-</li><li class="nav-item active">
-<a href="https://emilia-tann.github.io/jose-jose-camp/NAVBAR/Bio.html" class="nav-link navLinkContainer">
-<span class="navbarLinkText">
-Biografía
-<div class="linkBorder"></div>
-</span>
-</a>
-</li><li class="nav-item active">
-<a href="https://emilia-tann.github.io/jose-jose-camp/NAVBAR/Gale.html" class="nav-link navLinkContainer">
-<span class="navbarLinkText">
-Galeria
-<div class="linkBorder"></div>
-</span>
-</a>
-</li><li class="nav-item dropdown active">
-<a class="nav-link navLinkContainer dropdown-toggle" href="#" id="navbarDropdown-4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<span class="navbarLinkText">
-Recursos
-<div class="linkBorder"></div>
-</span>
-</a>
-<div class="dropdown-menu" aria-labelledby="navbarDropdown-4"><a class="dropdown-item " href="https://emilia-tann.github.io/jose-jose-camp/NAVBAR/Mapa.html">Mapa</a><a class="dropdown-item " href="https://emilia-tann.github.io/jose-jose-camp/NAVBAR/Opcion%20FAKE1.html">Opcion FAKE1</a><a class="dropdown-item " href="https://emilia-tann.github.io/jose-jose-camp/NAVBAR/Opcion%20FAKE1.html">Opcion FAKE2</a><a class="dropdown-item " href="https://emilia-tann.github.io/jose-jose-camp/NAVBAR/Opcion%20FAKE1.html">Opcion FAKE3</a><a class="dropdown-item " href="https://emilia-tann.github.io/jose-jose-camp/NAVBAR/Opcion%20FAKE1.html">Opcion FAKE4</a></div>
-</li><li class="nav-item active">
-<a href="https://emilia-tann.github.io/jose-jose-camp/NAVBAR/Can.html" class="nav-link navLinkContainer">
-<span class="navbarLinkText">
-Canciones
-<div class="linkBorder"></div>
-</span>
-</a>
-</li><li class="nav-item active">
-<a href="https://emilia-tann.github.io/jose-jose-camp/NAVBAR/Abt.html" class="nav-link navLinkContainer">
-<span class="navbarLinkText">
-Acerca de
-<div class="linkBorder"></div>
-</span>
-</a>
-</li>
-  </ul>
-</div>
-</nav>
-</header>
+<!-- Include the navbar from external file -->
+<div id="navbar-container"></div>
+<script>
+  $(function(){
+    $("#navbar-container").load("navbar.html");
+  });
+</script>
+
 <style>
   body {
     visibility: hidden;
